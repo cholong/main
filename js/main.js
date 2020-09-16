@@ -5,13 +5,26 @@ $(document).ready(function() {
         $(".container").fadeIn("slow");
     });
 
-    $(".apple-1").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-apple");
+    $(".apple-1").mouseenter(function(){
+        $(".back-1").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
     });
 
-    $(".apple-1").mouseenter(function(){
-        $(this).addClass("moving-apple");
+    $(".apple-1").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
+
 
     $(".apple-1").click(function() {
         $(this).toggleClass("center-apple");
@@ -28,16 +41,37 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".apple").toggle("1000");
+        $(".apple, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
-    $(".back-1").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-back");
+    var applea = ["Exercise", "Diet", "Personal Training", "Gym", "Squat", "Body Profile Photo"];
+    var appleb = ["Sleeveless", "Bum", "Ass", "Apple Hip Filler", "Apple Hip Surgery"];
+    var applec = ["Brazilian Wax", "Body Naked", "Breast", "Hips"];
+
+    $("#button-apple").click(function() {
+        $(".blank-applea").html(applea[Math.floor(Math.random() * applea.length)]);
+        $(".blank-appleb").html(appleb[Math.floor(Math.random() * appleb.length)]);
+        $(".blank-applec").html(applec[Math.floor(Math.random() * applec.length)]);
     });
 
     $(".back-1").mouseenter(function(){
-        $(this).addClass("moving-back");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
+    });
+
+    $(".back-1").mouseleave(function(){
+        $(".apple-1").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
 
     $(".back-1").click(function() {
@@ -55,16 +89,37 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".back").toggle("slide");
+        $(".back, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
-    $(".natural-2").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-natural");
+    var backa = ["Backside", "Hair", "Summer"];
+    var backb = ["Style", "Hair-shop", "Exercise"];
+    var backc = ["Photo", "Dyeing", "Instagram"];
+
+    $("#button-back").click(function() {
+        $(".blank-backa").html(backa[Math.floor(Math.random() * backa.length)]);
+        $(".blank-backb").html(backb[Math.floor(Math.random() * backb.length)]);
+        $(".blank-backc").html(backc[Math.floor(Math.random() * backc.length)]);
     });
 
     $(".natural-2").mouseenter(function(){
-        $(this).addClass("moving-natural");
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
+    });
+
+    $(".natural-2").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
 
     $(".natural-2").click(function() {
@@ -82,16 +137,38 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".natural").toggle("slide");
+        $(".natural, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
-    $(".fruit-2").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-fruit");
+    var naturala = ["Plastic surgery", "Medical treatment", "Face", "Authentic"];
+    var naturalb = ["Customer", "Small business for beauty treatment", "Natural Beauty Celebrity"];
+    var naturalc = ["Reservation", "Natural Beauty Hospital", "Eyebrow Treatment"];
+
+    $("#button-natural").click(function() {
+        $(".blank-naturala").html(naturala[Math.floor(Math.random() * naturala.length)]);
+        $(".blank-naturalb").html(naturalb[Math.floor(Math.random() * naturalb.length)]);
+        $(".blank-naturalc").html(naturalc[Math.floor(Math.random() * naturalc.length)]);
     });
+
 
     $(".fruit-2").mouseenter(function(){
-        $(this).addClass("moving-fruit");
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
+    });
+
+    $(".fruit-2").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
 
     $(".fruit-2").click(function() {
@@ -109,16 +186,27 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".fruit").toggle("slide");
-    });
-
-    $(".honey-2").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-honey");
+        $(".fruit, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
     $(".honey-2").mouseenter(function(){
-        $(this).addClass("moving-honey");
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
+    });
+
+    $(".honey-2").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
 
     $('.honey-2').click(function() {
@@ -136,17 +224,38 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".honey").toggle("slide");
+        $(".honey, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
+    var honeya = ["Thigh", "School uniform", "Skirt"];
+    var honeyb = ["Exposure", "Hot pants", "Body line"];
+    var honeyc = ["Pants", "Belly Fat", "Anorexia"];
 
-    $(".gold-1").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-gold")
+    $("#button-honey").click(function() {
+        $(".blank-honeya").html(honeya[Math.floor(Math.random() * honeya.length)]);
+        $(".blank-honeyb").html(honeyb[Math.floor(Math.random() * honeyb.length)]);
+        $(".blank-honeyc").html(honeyc[Math.floor(Math.random() * honeyc.length)]);
     });
+
 
     $(".gold-1").mouseenter(function(){
-        $(this).addClass("moving-gold");
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
+    });
+
+    $(".gold-1").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
     });
 
     $('.gold-1').click(function() {
@@ -164,19 +273,31 @@ $(document).ready(function() {
         $(".bagel-2").toggleClass("animate-bagel2");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".gold").toggle("slide");
+        $(".gold, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
-    $(".bagel-2").mouseleave("webkitAnimationEnd", function(){
-        $(this).removeClass("moving-bagel");
-    });
 
     $(".bagel-2").mouseenter(function(){
-        $(this).addClass("moving-bagel");
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
+        $(".coke-2, .coke-3").css("animation-play-state", "paused");
     });
 
-    $('.bagel-2').click(function() {
+    $(".bagel-2").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+        $(".coke-2, .coke-3").css("animation-play-state", "running");
+    });
+
+    $(".bagel-2").click(function() {
         $(this).toggleClass("center-bagel");
         $(".back-1").toggleClass("animate-back");
         $(".apple-1").toggleClass("animate-apple");
@@ -191,21 +312,40 @@ $(document).ready(function() {
         $(".bagel-1").toggleClass("animate-bagel1");
         $(".coke-2").toggleClass("animate-coke2");
         $(".coke-3").toggleClass("animate-coke3");
-
-        $(".bagel").toggle("slide");
+        $(".bagel, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
-    $(".coke-2, .coke-3").mouseleave("webkitAnimationEnd", function(){
-        $(".coke-2").removeClass("moving-coke2");
-        $(".coke-3").removeClass("moving-coke3");
+    var bagela = ["Body Shape", "Review", "Cost"];
+    var bagelb = ["Quality", "kawn-ack", "Guro", "Dating"];
+    var bagelc = ["Call-girl", "Yangcheon", "Yongsan", "Guidance"];
+
+    $("#button-bagel").click(function() {
+        $(".blank-bagela").html(bagela[Math.floor(Math.random() * bagela.length)]);
+        $(".blank-bagelb").html(bagelb[Math.floor(Math.random() * bagelb.length)]);
+        $(".blank-bagelc").html(bagelc[Math.floor(Math.random() * bagelc.length)]);
     });
 
-    $(".coke-2, .coke-3").mouseenter(function(){
-        $(".coke-2").addClass("moving-coke2");
-        $(".coke-3").addClass("moving-coke3");
+    $(".coke-2,.coke-3").mouseenter(function(){fruit
+        $(".back-1").css("animation-play-state", "paused");
+        $(".apple-1").css("animation-play-state", "paused");
+        $(".fruit-2").css("animation-play-state", "paused");
+        $(".natural-2").css("animation-play-state", "paused");
+        $(".gold-1").css("animation-play-state", "paused");
+        $(".bagel-2").css("animation-play-state", "paused");
+        $(".honey-2").css("animation-play-state", "paused");
     });
 
-    $(".coke-2, .coke-3").click(function() {
+    $(".coke-2,.coke-3").mouseleave(function(){
+        $(".back-1").css("animation-play-state", "running");
+        $(".apple-1").css("animation-play-state", "running");
+        $(".fruit-2").css("animation-play-state", "running");
+        $(".natural-2").css("animation-play-state", "running");
+        $(".gold-1").css("animation-play-state", "running");
+        $(".bagel-2").css("animation-play-state", "running");
+        $(".honey-2").css("animation-play-state", "running");
+    });
+
+    $(".coke-2, coke-3").click(function() {
         $(".coke-2").toggleClass("center-coke2");
         $(".coke-3").toggleClass("center-coke3");
         $(".back-1").toggleClass("animate-back");
@@ -220,8 +360,7 @@ $(document).ready(function() {
         $(".gold-2").toggleClass("animate-gold2");
         $(".bagel-1").toggleClass("animate-bagel1");
         $(".bagel-2").toggleClass("animate-bagel2");
-
-        $(".coke").toggle("slide");
+        $(".coke, .side-1, .side-2, .side-3, .side-4").fadeToggle(100);
     });
 
 });
