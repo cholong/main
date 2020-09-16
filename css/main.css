@@ -13,8 +13,8 @@ a {
     left: 50%;
     transform: translate(-50%, -40%);
     font-family: 'Raleway Dots', cursive;
-    font-size: 8vw;
-    line-height: 8vw;
+    font-size: 10vw;
+
     text-align: center;
     color: #0c090a;
     filter: blur(1);
@@ -33,7 +33,7 @@ a {
 
 #intro-title {
     font-family: 'Raleway Dots', cursive;
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 .intro {
@@ -86,41 +86,39 @@ a {
 
 .indicator {
     font-family: 'Raleway', sans-serif;
-    font-size: 1vw;
+    font-size: .8vw;
     font-weight: 200;
-    color: #2f2f2f;
+    color: #5c5c5c;
 }
 
 .side-1 {
     position: absolute;
-    top: 6%;
-    left: 9%;
-    transform: translate(-9%, -6%);
+    top: 4%;
+    left: 12%;
+    transform: translate(-12%, -4%);
 }
 
 .side-2{
     position: absolute;
-    top: 6%;
+    top: 4%;
     left: 88%;
-    transform: translate(-88%, -6%);
+    transform: translate(-88%, -4%);
     text-align: right;
 }
 
 .side-3 {
     position: absolute;
-    top: 92%;
-    left: 9%;
-    transform: translate(-9%, -92%);
-    color: #5c5c5c;
+    top: 94%;
+    left: 12%;
+    transform: translate(-12%, -94%);
     display: none;
 }
 
 .side-4 {
     position: absolute;
-    top: 92%;
+    top: 94%;
     left: 86%;
-    transform: translate(-86%, -92%);
-    color: #5c5c5c;
+    transform: translate(-86%, -94%);
     text-align: right;
     display: none;
 }
@@ -128,8 +126,8 @@ a {
 .left-title {
     position: absolute;
     top: 50%;
-    left: -25%;
-    transform: translate(25%, -50%) rotate(90deg);
+    left: -27%;
+    transform: translate(27%, -50%) rotate(90deg);
     font-family: 'Raleway Dots', cursive;
     font-size: 10vw;
     font-weight: 200;
