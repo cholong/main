@@ -316,8 +316,8 @@ $(document).ready(function() {
     });
 
     var bagela = ["Body Shape", "Review", "Cost"];
-    var bagelb = ["Quality", "kawn-ack", "Guro", "Dating"];
-    var bagelc = ["Call-girl", "Yangcheon", "Yongsan", "Guidance"];
+    var bagelb = ["Quality", "Kawn-ack", "Guro", "Dating"];
+    var bagelc = ["Call-girl", "Yang-cheon", "Yong-san", "Guidance"];
 
     $("#button-bagel").click(function() {
         $(".blank-bagela").html(bagela[Math.floor(Math.random() * bagela.length)]);
